@@ -29,9 +29,16 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
+prisma/.env
 
 # vercel
 .vercel
 
 # typescript
 *.tsbuildinfo
+
+# graphql
+src/graphql/schema/nexus-prisma-typegen.ts
+src/graphql/schema/nexus-typegen.ts
+src/graphql/schema/schema.graphql
+
