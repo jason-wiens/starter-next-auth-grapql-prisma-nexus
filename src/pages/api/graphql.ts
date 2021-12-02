@@ -3,6 +3,7 @@ import { schema } from "../../graphql/schema";
 import { ApolloServer } from "apollo-server-micro";
 import cors from "micro-cors";
 import { NextApiHandler } from "next";
+import { RequestHandler } from "micro";
 
 export const config = {
   api: {
@@ -40,4 +41,4 @@ const handler: NextApiHandler = async (req, res) => {
   return apolloServerHandler(req, res);
 };
 
-export default cors()(handler);
+export default cors()(handler as RequestHandler);

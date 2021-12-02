@@ -8,6 +8,7 @@ This starter application includes a basic setup for the following stack:
 - Next.js
 - React
 - Material-Ui
+- Emotion
 - NextAuth.js
 - GraphQl
 - Apollo Server
@@ -15,6 +16,9 @@ This starter application includes a basic setup for the following stack:
 - Prisma
 - Nexus
 - GraphQl-Shield
+- Eslint
+- Prettier
+- Husky
 
 ## 🚀 Getting started
 

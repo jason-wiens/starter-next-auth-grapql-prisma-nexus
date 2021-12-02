@@ -7,8 +7,8 @@ export const User = objectType({
     t.string("name");
     t.string("email");
     t.string("image");
-    t.date("createdAt");
-    t.date("updatedAt");
+    t.string("createdAt");
+    t.string("updatedAt");
   },
 });
 

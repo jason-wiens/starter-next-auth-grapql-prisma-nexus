@@ -8,11 +8,11 @@ import * as types from "./types";
 export const GQLDate = asNexusMethod(DateTimeResolver, "date");
 
 export const baseSchema = makeSchema({
-  types,
+  types: [types, GQLDate],
   plugins: [],
   outputs: {
-    typegen: path.join(process.cwd(), "src/graphql/schema/nexus-typegen.ts"),
-    schema: path.join(process.cwd(), "src/graphql/schema/schema.graphql"),
+    typegen: path.join(process.cwd(), "src/graphql/generated/nexus-typegen.ts"),
+    schema: path.join(process.cwd(), "src/graphql/generated/schema.graphql"),
   },
   contextType: {
     module: path.join(process.cwd(), "src/graphql/context.ts"),
