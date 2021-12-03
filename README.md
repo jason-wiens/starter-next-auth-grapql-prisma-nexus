@@ -30,16 +30,18 @@ This starter application includes a basic setup for the following stack:
 3. BYO database...
 4. Create a new .env file in the `/prisma` folder
 5. Add connection string environment variable
-   ```
-   DATABASE_URL=<PUT_CONNECTION_STRING_HERE>
-   ```
+
+```
+DATABASE_URL=<PUT_CONNECTION_STRING_HERE>
+```
 
 ### Initiate prisma and nexus
 
 6. Run the following command in cli
-   ```
-   npm run generate && prisma migrate
-   ```
+
+```
+npm run generate && prisma migrate
+```
 
 ### Add authentication credentials for oauth
 
