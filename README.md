@@ -30,20 +30,25 @@ This starter application includes a basic setup for the following stack:
 3. BYO database...
 4. Create a new .env file in the `/prisma` folder
 5. Add connection string environment variable
-   `DATABASE_URL=<PUT_CONNECTION_STRING_HERE>`
+   ```
+   DATABASE_URL=<PUT_CONNECTION_STRING_HERE>
+   ```
 
 ### Initiate prisma and nexus
 
 6. Run the following command in cli
-   `npm run generate && prisma migrate`
+   ```
+   npm run generate && prisma migrate
+   ```
 
 ### Add authentication credentials for oauth
 
 7. Create a new `.env.local` file in the root of the project
 8. Add the following environment variables (plus additional providers if any)
-   `
-   EMAIL_SERVER=
-   EMAIL_FROM=
+
+```
+EMAIL_SERVER=
+EMAIL_FROM=
 
 PROVIDER_LINKEDIN_CLIENT_ID=
 PROVIDER_LINKEDIN_CLIENT_SECRET=
@@ -55,7 +60,7 @@ PROVIDER_GITHUB_CLIENT_ID=
 PROVIDER_GITHUB_CLIENT_SECRET=
 
 AUTH_SECRET=
-`
+```
 
 ### Start playing
 
