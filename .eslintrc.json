@@ -23,8 +23,10 @@
     "@emotion/jsx-import": "error",
     "@emotion/no-vanilla": "error",
     "@emotion/import-from-emotion": "error",
-    "@emotion/styled-import": "error"
+    "@emotion/styled-import": "error",
+    "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }]
   },
+  "ignorePatterns": ["**/generated/*.ts", "**/node_modules/**"],
   "settings": {
     "react": {
       "version": "detect"

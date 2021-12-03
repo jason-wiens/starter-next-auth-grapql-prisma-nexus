@@ -3,7 +3,7 @@ import { objectType, extendType, stringArg, nonNull } from "nexus";
 export const User = objectType({
   name: "User",
   definition(t) {
-    t.int("id");
+    t.string("id");
     t.string("name");
     t.string("email");
     t.string("image");
@@ -20,10 +20,11 @@ export const UserQueries = extendType({
       args: {
         userId: nonNull(stringArg()),
       },
-      resolve: (_, args, ctx) => {
-        return ctx.prisma.user.findUnique({
-          where: { id: Number(args.userId) },
+      resolve: async (_, args, ctx) => {
+        const user = await ctx.db.user.findUnique({
+          where: { id: args.userId },
         });
+        return user;
       },
     });
   },
@@ -39,7 +40,7 @@ export const UserMutations = extendType({
         email: nonNull(stringArg()),
       },
       resolve: (_, { name, email }, ctx) => {
-        return ctx.prisma.user.create({
+        return ctx.db.user.create({
           data: {
             name,
             email,

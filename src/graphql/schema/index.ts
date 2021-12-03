@@ -1,13 +1,13 @@
 import { makeSchema, asNexusMethod } from "nexus";
 import { DateTimeResolver } from "graphql-scalars";
 import path from "path";
-import { applyMiddleware } from "graphql-middleware";
-import { permissions } from "../permissions";
+// import { applyMiddleware } from "graphql-middleware";
+// import { permissions } from "../permissions";
 import * as types from "./types";
 
 export const GQLDate = asNexusMethod(DateTimeResolver, "date");
 
-export const baseSchema = makeSchema({
+export const schema = makeSchema({
   types: [types, GQLDate],
   plugins: [],
   outputs: {
@@ -28,4 +28,4 @@ export const baseSchema = makeSchema({
   },
 });
 
-export const schema = applyMiddleware(baseSchema, permissions);
+// export const schema = applyMiddleware(baseSchema, permissions);

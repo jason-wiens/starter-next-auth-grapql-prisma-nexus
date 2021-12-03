@@ -1,15 +1,6 @@
-import React, { useEffect } from "react";
-import { useSession } from "next-auth/client";
+import React from "react";
 
 const ProfilePage = () => {
-  const [session, loading] = useSession();
-
-  useEffect(() => {
-    if (!loading) {
-      console.log(session);
-    }
-  }, [loading]);
-
   return <div>Profile Page</div>;
 };
 
